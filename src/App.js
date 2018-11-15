@@ -9,8 +9,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Мой топ фото</h1>
         </header>
-        <p className="App-intro">Здесь будут мои самые залайканые фото</p>
-        <p>Меня зовут: {this.props.user.name}</p>
+        <p>Привет {this.props.user.name}</p>
+        <p>у тебя {this.props.page.photos.length} фото за {this.props.page.year} год</p>
       </div>
     );
   }
@@ -20,6 +20,7 @@ const mapStateToProps = store => {
   console.log(store)
   return {
     user: store.user,
+    page: store.page,
   }
 }
 
